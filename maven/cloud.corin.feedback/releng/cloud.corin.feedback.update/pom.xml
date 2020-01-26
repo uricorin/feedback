@@ -1,0 +1,11 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cloud.corin.feedback</groupId>
+        <artifactId>cloud.corin.feedback.releng</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>cloud.corin.feedback.update</artifactId>
+    <version>1.0.0</version>
+    <packaging>eclipse-repository</packaging>
+</project>

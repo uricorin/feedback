@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Feedback Category"
+            id="cloud.corin.feedback.core.commands.category">
+      </category>
+      <command
+            categoryId="cloud.corin.feedback.core.commands.category"
+            id="cloud.corin.feedback.core.commands.submitCompilation"
+            name="Compile">
+      </command>
+      <command
+            categoryId="cloud.corin.feedback.core.commands.category"
+            id="cloud.corin.feedback.core.commands.getCompilationMessages"
+            name="Show feedback">
+      </command>
+      <command
+            categoryId="cloud.corin.feedback.core.commands.category"
+            id="cloud.corin.feedback.core.commands.setupCompilation"
+            name="Edit compilation job">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="cloud.corin.feedback.core.handlers.SubmitCompilationHandler"
+            commandId="cloud.corin.feedback.core.commands.submitCompilation">
+      </handler>
+      <handler
+            class="cloud.corin.feedback.core.handlers.GetCompilationMessagesHandler"
+            commandId="cloud.corin.feedback.core.commands.getCompilationMessages">
+      </handler>
+      <handler
+            class="cloud.corin.feedback.core.handlers.SetupCompilationHandler"
+            commandId="cloud.corin.feedback.core.commands.setupCompilation">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="cloud.corin.feedback.core.commands.submitCompilation"
+            contextId="com.ibm.systemz.cobol.editor.jface.cobol.context"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="F9">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:com.ibm.systemz.cobol.editor.jface.editor.CobolEditorID.EditorContext">
+         <menu
+               id="cloud.corin.feedback.core.menus.sampleMenu"
+               label="Feedback"
+               mnemonic="F">
+            <command
+                  commandId="cloud.corin.feedback.core.commands.submitCompilation"
+                  id="cloud.corin.feedback.core.menus.submitCompilation"
+                  mnemonic="C">
+            </command>
+            <command
+                  commandId="cloud.corin.feedback.core.commands.getCompilationMessages"
+                  id="cloud.corin.feedback.core.menus.getCompilationMessages"
+                  mnemonic="S">
+            </command>
+            <command
+                  commandId="cloud.corin.feedback.core.commands.setupCompilation"
+                  id="cloud.corin.feedback.core.menus.setupCompilation"
+                  mnemonic="E">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>

@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JCL Core
+Bundle-SymbolicName: cloud.corin.jcl.core;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: cloud.corin.jcl.core.Activator
+Bundle-Vendor: CORIN
+Require-Bundle: org.eclipse.ui;bundle-version="3.108.2",
+ org.eclipse.core.runtime;bundle-version="3.12.0",
+ com.ibm.systemz.jcl.editor.jface;bundle-version="1.2.125",
+ com.ibm.systemz.common.jface;bundle-version="2.8.9",
+ com.ibm.ftt.resources.core,
+ com.ibm.ftt.resources.zos
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: cloud.corin.jcl.core,
+ cloud.corin.jcl.core.handlers
+Import-Package: cloud.corin.common.rdz

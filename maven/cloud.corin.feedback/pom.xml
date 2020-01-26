@@ -1,0 +1,20 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cloud.corin.feedback</groupId>
+	<artifactId>cloud.corin.feedback.root</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	
+	<parent>
+		<groupId>cloud.corin.feedback</groupId>
+		<artifactId>cloud.corin.feedback.configuration</artifactId>
+		<version>1.0.0</version>
+		<relativePath>./releng/cloud.corin.feedback.configuration</relativePath>
+	</parent>
+	
+	<modules>
+		<module>bundles</module>
+		<module>features</module>
+		<module>releng</module>
+	</modules>
+</project>

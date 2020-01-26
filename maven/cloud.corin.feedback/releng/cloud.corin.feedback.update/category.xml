@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/cloud.corin.feedback.feature_1.0.0.jar" id="cloud.corin.feedback.feature" version="1.0.0">
+      <category name="compilationfeedback"/>
+   </feature>
+   <category-def name="compilationfeedback" label="Compilation Feedback">
+      <description>
+         Compiler messages from COBOL
+      </description>
+   </category-def>
+</site>

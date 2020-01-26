@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="JCL Category"
+            id="cloud.corin.jcl.core.commands.category">
+      </category>
+      <command
+            categoryId="cloud.corin.jcl.core.commands.category"
+            id="cloud.corin.jcl.core.commands.getJCL"
+            name="Retrieve JCL">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="cloud.corin.jcl.core.handlers.GetJCLHandler"
+            commandId="cloud.corin.jcl.core.commands.getJCL">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:com.ibm.systemz.jcl.editor.jface.editor.JclEditorID.EditorContext">
+         <menu
+               id="cloud.corin.jcl.core.menus.sampleMenu"
+               label="SPOOL actions"
+               mnemonic="F">
+            <command
+                  commandId="cloud.corin.jcl.core.commands.getJCL"
+                  id="cloud.corin.jcl.core.menus.getJCL"
+                  mnemonic="C">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
