@@ -7,7 +7,7 @@
 	<properties>
 		<tycho.version>1.4.0</tycho.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<eclipse-repo.url>jar:file:/home/uri/Downloads/aqua3.1.27.update.site-20190905.zip!/</eclipse-repo.url>
+		<eclipse-repo.url>jar:file:/home/uri/Downloads/aqua3.1.29.update.site-20200110.zip!/</eclipse-repo.url>
 	</properties>
 	<repositories>
 		<repository>
