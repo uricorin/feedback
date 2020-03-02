@@ -1,6 +1,10 @@
 # Feedback
 A Developer for z (IDz, formerly RDZ) plugin for making COBOL compiler messages easily accessible.
 
+[![demo](demo/feedback.gif)](demo/feedback.webm?raw=true)  
+[Click for HD video](demo/feedback.webm?raw=true)  
+[Demo breakdown](demo/README.md)
+
 This is a *working* technical demo, not a finalized product.  
 Comments are welcome.
 
@@ -9,8 +13,6 @@ Comments are welcome.
 * Monitor the compilation job as it runs
 * Display compilation messages in the editor
 
-TODO - Add gif
-  
 ## Usage notes
 * Only the **COBOL editor** is support at this time - The features are only available from within the COBOL editor.
   * A `Feedback` context menu is available when right-clicking inside the editor    
