@@ -2,7 +2,8 @@
 A Developer for z (IDz, formerly RDZ) plugin for making COBOL compiler messages easily accessible.
 
 [![demo](demo/feedback.gif)](demo/feedback.webm?raw=true)  
-[Click for HD video](demo/feedback.webm?raw=true)
+[Click for HD video](demo/feedback.webm?raw=true)  
+[Demo breakdown](demo/README.md)
 
 This is a *working* technical demo, not a finalized product.  
 Comments are welcome.
