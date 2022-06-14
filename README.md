@@ -23,12 +23,33 @@ Comments are welcome.
 
 # Getting started
 ## Building
+### Prerequisites
 1. Set up a [target platform](https://github.com/uricorin/feedback/wiki/Setting-up-a-target-platform)
-2. Update the reference to the target platform in ./maven/cloud.corin.feedback/releng/cloud.corin.feedback.configuration/pom.xml 
-3. Change directory to ./maven/cloud.corin.feedback
-4. Run the following command `mvn clean verify` (requires maven)
 
-Installable artifacts will be created in .maven/cloud.corin.feedback/releng/cloud.corin.feedback.update/target/
+### Native build
+1. Update the reference to the target platform in ./maven/cloud.corin.feedback/releng/cloud.corin.feedback.configuration/pom.xml
+2. Change directory to maven/cloud.corin.feedback
+3. Run the following command `mvn clean verify` (requires maven)
+
+### Dockerized build
+1. Optional - Update the reference eclipse-repo.url to the target platform in maven/cloud.corin.feedback/releng/cloud.corin.feedback.configuration/pom.xml  
+    1. For IBM's aqua3.2, no change is required
+    2. For IBM's aqua3.1, use the commented-out line
+
+2. Run the following command (requires docker)  
+    ``` 
+    docker run --rm -it -w /project -v <path to maven/cloud.corin.feedback directory>:/project -v <path to update site zip file>:/update-sites/aqua-update-site.zip maven:3.8.5-openjdk-8 mvn clean verify
+    ```  
+    For exmaple:  
+      1. Change directory to the base directory of the project  
+      2. Place the update site zip (aqua3.2_all_update_site.zip) in the base directory  
+      3. Run
+          ``` 
+          docker run --rm -it -w /project -v maven/cloud.corin.feedback:/project -v aqua3 2_all_update_site.zip:/update-sites/aqua-update-site.zip maven:3.8.5-openjdk-8 mvn clean verify 
+          ```
+        
+### Artifacts
+Installable artifacts will be created in maven/cloud.corin.feedback/releng/cloud.corin.feedback.update/target/
 
 ## Installing
 1. Inside IDz, add the p2 update site produced in the previous step (or downloaded from [Releases](https://github.com/uricorin/feedback/releases)) to Available Software Sites
